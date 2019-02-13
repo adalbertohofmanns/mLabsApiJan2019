@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   acts_as_token_authenticatable
+  has_many :dependents, dependent: :destroy
 end
